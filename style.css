@@ -5,7 +5,8 @@
         width: 100%;
         max-width: 1080px;
         margin: 20px auto;
-        background-image: url('cele.jpg');
+        background-image: url('cele.webp');
+        /* background-image: url('cele.jpg'); */
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -23,8 +24,17 @@
         top: 45.8%;
         transform: translate(-50%, -50%);
     }
+    .template-container, #image-preview {
+        will-change: transform;
+        backface-visibility: hidden;
+    }
 
     /* Responsive Adjustments */
+    @media (pointer: coarse) {
+        body {
+            touch-action: manipulation;
+        }
+    }
     @media (max-width: 1201px) {
         #image-preview {
             width: 36%;
